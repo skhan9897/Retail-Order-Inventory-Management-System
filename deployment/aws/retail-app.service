@@ -1,0 +1,14 @@
+[Unit]
+Description=RetailOrderManagementSystem Spring Boot Application
+After=network.target mysql.service kafka.service
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/app
+ExecStart=/usr/bin/java -jar -Dspring.profiles.active=prod /home/ubuntu/app/RetailOrderManagementSystem-1.0-SNAPSHOT.jar
+SuccessExitStatus=143
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

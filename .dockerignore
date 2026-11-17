@@ -1,0 +1,7 @@
+target/
+.git/
+.gitignore
+.idea/
+*.iml
+*.log
+retail-order-management/frontend/node_modules/
